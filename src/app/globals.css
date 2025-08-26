@@ -1,0 +1,70 @@
+@import "tailwindcss";
+@import "tailwindcss-animate";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-buttons: var(--buttons);
+  --color-textSecondary: var(--text-secondary);
+  --color-textPrimary: var(--text-primary);
+  --color-backgroundSecondary: var(--background-secondary);
+  --color-backgroundPrimary: var(--background-primary);
+  --color-borderColor: var(--border-color);
+
+  --border: var(--color-borderColor);
+  --input: var(--color-borderColor);
+  --ring: var(--color-borderColor);
+  --background: var(--color-backgroundPrimary);
+  --foreground: var(--color-textPrimary);
+  --primary: {
+    DEFAULT: "var(--color-textPrimary)";
+    foreground: "var(--color-backgroundPrimary)";
+  };
+  --secondary: {
+    DEFAULT: "var(--color-backgroundSecondary)";
+    foreground: "var(--color-textSecondary)";
+  };
+  --destructive: {
+    DEFAULT: "#ef4444";
+    foreground: "#f8fafc";
+  };
+  --muted: {
+    DEFAULT: "var(--color-backgroundSecondary)";
+    foreground: "var(--color-textSecondary)";
+  };
+  --accent: {
+    DEFAULT: "var(--color-backgroundSecondary)";
+    foreground: "var(--color-textPrimary)";
+  };
+  --popover: {
+    DEFAULT: "var(--color-backgroundPrimary)";
+    foreground: "var(--color-textPrimary)";
+  };
+  --card: {
+    DEFAULT: "var(--color-backgroundPrimary)";
+    foreground: "var(--color-textPrimary)";
+  };
+}
+
+:root {
+  --background-primary: rgba(249, 250, 251, 1);
+  --background-secondary: rgba(243, 244, 246, 1);
+  --text-primary: rgba(17, 24, 39, 1);
+  --text-secondary: rgba(107, 114, 128, 1);
+  --buttons: rgba(250, 204, 21, 1);
+  --border-color: rgba(229, 231, 235, 1);
+}
+
+.dark {
+  --background-primary: rgba(17, 24, 39, 1);
+  --background-secondary: rgba(55, 65, 81, 1);
+  --text-primary: rgba(243, 244, 246, 1);
+  --text-secondary: rgba(156, 163, 175, 1);
+  --buttons: rgba(250, 204, 21, 1);
+  --border-color: rgba(55, 65, 81, 1);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
